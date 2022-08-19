@@ -1,0 +1,84 @@
+step 1: case study là trang quiz
+step 2: dùng boostrap
+step 3: chức năng
+- Đăng kí, đăng nhập:
+  + Tạo tài khoản với trang đăng kí
+  + Login tài khoản đã tạo
+  # Có formik validation các input 
+- Trang chủ - Học sinh có khả năng:
+  + Làm bài tập
+  + Nộp bài tập
+  + Xem kết quả + đáp án
+step 4: thiết kế giao diện
+  - RegisterStudentComponent
+  - LoginStudentComponent
+  - QuizListComponent:
+    + hiển thị các test case
+  - QuizComponent:
+    + làm và nộp bài, có bộ đếm thời gian
+  - ResultComponent:
+    + xem kết quả và đáp án
+step 5: action và reducer
+  -takeQuiz: [
+     {
+        exam_id: testCase.exam_id,
+        email: 'abc@gmail.com',
+        mark: 0
+        answer: [
+          {
+            id: 1,
+            result: B
+          }
+        ]
+     }
+
+  ]
+  -testCase: [
+    {
+      id: 1,
+      subject: 'math',
+      name: 'quiz 1',
+      time: 60p
+      question: [
+       { 
+        id: 1,
+        title: 'câu hỏi 1',
+        answer: [
+          A:,
+          B:,
+          C:,
+          D:
+        ],
+        rightAnswer: A
+        }
+      ]
+    }
+  ]
+  - result:
+  [
+    {
+      email: 'abc@gmail.com',
+      exam_id: 1,
+      result: lấy số câu đúng theo email đky làm bài và exam_id,
+      date: ngày làm bài
+    }
+    số câu đúng từ test list?(get theo email người làm)
+  ]
+
+  -register: Đăng kí học sinh (email, usernmae, password) 
+  => lưu lên local storage => chuyển sang đăng nhập
+  # Validate Formik
+  -login: Đăng nhập tài khoản => check đã có trên local storage chưa,
+  nếu có hãy chuyển sang trang chủ 
+  # Validate Formik
+  -getTestList: Trang chủ =>
+  hiện list các TestCase có name + subject + time + số câu hỏi
+  -takeQuiz: giao diện làm bài => 
+  hiện list câu hỏi từ test case, tích đc đáp án a b c d,
+  tạo 1 storage answer với email và exam_id để có result.
+  -submitExam: (email,range dateTime)
+  => danh sách bài làm theo email và ngày đó đã làm đc bnh?
+  -getDetailResult: lấy số câu đúng = cách kiểm tra question rightAnswer có = answer result ko?
+
+
+  

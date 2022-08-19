@@ -1,0 +1,28 @@
+ỨNG DỤNG REGISTER & LOGIN:
++ Giao diện đầu tiên có 2 nút login và regisrer
++ 2 Route login và register tương úng
+
+REGISTER:
+- Có 3 input:
++ USERNAME
++ PASSWORD
++ CONFIRM PASSWORD 
+- Input password:
++ Phải tồn tại ít nhất 6 kí tự 
+- Input confirm password:
++ Phải giống input confirm password
+- Input username:
++ Phải tồn tại ít nhất 3 kí tự và không được trùng lặp 
+- Khi submit thành công tài khoản:
++ Đẩy lên local storage
+
+LOGIN:
+- Có 2 input:
++ USERNAME
++ PASSWORD
+- Input username và password: 
++ Đã tồn tại trong local storage
+- Khi submit thành công:
++ Đi tới trang tiếp theo
+
+
